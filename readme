@@ -1,0 +1,61 @@
+3D Real Time Rendering Assignment 2
+
+Name: Li Zuyi , Luo Min
+Id  : s3260309, s3195794
+
+Compile by typing 'make', to run type ./breakoutv2
+
+key function:
+1  'ESCAPE', 'q': exit the application and release the dynamically allocated memory;
+
+2  'F2': if you are in level one or level two, press F2 to start the game directly without 
+         waiting for 5 sec to 10 sec for the tags to dissappear;
+
+   'a':  show the system axes and self axes;                            
+ 
+   'b':  show the aabb box of bricks and ball;
+
+   'g':  press g to switch the algorithm between btrueforce and uniformgrid algorithm,
+		     the school machine might be very fast and the number of the brick is not large,
+         so we can't really see much difference
+         between bruteforce and uniform-grid. But if we run it our labtop, the uniform-grid 
+         is quicker;                      
+
+   'p':  it is a cheating way, especially for testing. Press p to get into 
+         level two directly;
+   's':  because of the bricks shape, the velocity is devided into x and y direction.
+         In some cases, the velocity in one direction nearlly gets disappeared. and 
+         the speed of the ball is greatly reduced. Using 's' to speed up.
+   'x', 'y':  Because of the different bricks' shape, sometime the ball may end up bouncing
+		 between bound.y1 and bound.y2 parallel to the 'x' Axes. 
+		'x'is used to generate a velocity in x positive direction, 'y' is used to generate
+        a (1,0) velocity.
+   't':  display time it takes to finish do for collision detection on the bricks
+   'l':  increase level 2 paddle's speed , init speed is at 0.01f you can increase to 1.0f
+   'k':  derease paddle's speed to a min of 0.01f
+   
+Note: 
+    . complete each level by hitting all the bricks with the ball.
+    . if you lose the game in whichever level, you will have to go back to level one to start.
+      again. you have 5 chance in one level.
+
+<Leve 1>
+Navigation:
+. Move the paddle using left and right arrow keys.
+. Move left or right when the ball collide on the paddle to increase the speed in that direction.
+
+GamePlay:
+. pPrevent the ball from falling below the paddle.
+. complete by hitting all the bricks with the ball.
+
+<Level 2>
+Navigation:
+. Move the paddle using left and right arrow keys
+. Player can only move between the two red dot
+
+GamePlay:
+. Prevent the ball from hitting the area between the two red dot
+. Complete by hitting all the bricks with the ball.
+
+The game completes when you finish two levels.
+
